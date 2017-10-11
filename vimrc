@@ -1,7 +1,7 @@
 " Don't try to be vi compatible
 set nocompatible
 
-" Helps force plugins to load correctly when it is turned bac on below
+" Helps force plugins to load correctly when it is turned back on below
 filetype off
 
 "set the runtime path to include Vundle and initialize
@@ -100,13 +100,24 @@ set smartcase
 " when a bracket is inserted, briefly jump to the matching one
 set showmatch
 
-" highlight current line when in insert mode
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
-
 " color schemes and themes
 let g:airline_theme='one'
 colorscheme one
 set background=dark	"for the dark version
 " set background=light 	"for the light version
 
+" highlight current line when in insert mode
+:autocmd InsertEnter * set cul
+:autocmd InsertLeave * set nocul
+
+" folding and indents for XML data
+" per
+" https://stackoverflow.com/questions/32154285/folding-expanding-and-colapsing-xml-tags-in-vim-xml-parsing
+" accessed 2017-10-11
+augroup XML
+        autocmd!
+        autocmd FileType xml let g:xml_syntax_folding=1
+        autocmd FileType xml setlocal foldmethod=syntax
+        autocmd FileType xml :syntax on
+        autocmd FileType xml :%foldopen!
+augroup END       
