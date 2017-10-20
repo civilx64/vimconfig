@@ -16,13 +16,15 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin()/end().
 " plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on Github
 " Plugin 'git://git.wincent.com/command-t.git
 " git repos on your local machine (e.g. when working on your own plugin)
 " Plugin 'file:///home/scott/path/to/plugin'
+
+Plugin 'tmhedberg/SimpylFold'
 
 " Atom One Dark theme
 Plugin 'rakr/vim-one'
@@ -99,6 +101,23 @@ set smartcase
 
 " when a bracket is inserted, briefly jump to the matching one
 set showmatch
+
+" specify where splits should occur
+set splitbelow
+set splitright
+
+" split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with spacebar
+nnoremap <space> za
 
 " color schemes and themes
 let g:airline_theme='one'
