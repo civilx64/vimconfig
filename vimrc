@@ -14,9 +14,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
+
 " Keep Plugin commands between vundle#begin()/end().
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on Github
@@ -24,10 +32,8 @@ Plugin 'tpope/vim-fugitive'
 " git repos on your local machine (e.g. when working on your own plugin)
 " Plugin 'file:///home/scott/path/to/plugin'
 
-Plugin 'tmhedberg/SimpylFold'
-
-" Atom One Dark theme
-Plugin 'rakr/vim-one'
+" syntax checking and highlighting
+Plugin 'scrooloose/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
@@ -120,10 +126,13 @@ set foldlevel=99
 nnoremap <space> za
 
 " color schemes and themes
-let g:airline_theme='one'
-colorscheme one
-set background=dark	"for the dark version
-" set background=light 	"for the light version
+colorscheme jellybeans
+" set background=light
+
+" 256 colors in terminal for tmux
+if $TERM == 'screen'
+set t_Co=256
+endif
 
 " highlight current line when in insert mode
 :autocmd InsertEnter * set cul
@@ -140,3 +149,26 @@ augroup XML
         autocmd FileType xml :syntax on
         autocmd FileType xml :%foldopen!
 augroup END       
+
+" PEP8 indentation for python
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" indentation for full stack dev
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+" ignore python bytecode files
+let NERDTreeIgnore=['\.pyc$', '\~$']
+
+" flag unnecessary white space
+au BufNewFile,BufRead *.py, *.pyw, *.c, *.h match BadWhiteSpace /\s\+$/
+
