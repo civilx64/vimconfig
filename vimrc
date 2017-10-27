@@ -23,7 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -127,7 +127,7 @@ nnoremap <space> za
 
 " color schemes and themes
 colorscheme jellybeans
-" set background=light
+"set background=light
 
 " 256 colors in terminal for tmux
 if $TERM == 'screen'
@@ -150,25 +150,10 @@ augroup XML
         autocmd FileType xml :%foldopen!
 augroup END       
 
-" PEP8 indentation for python
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
-" indentation for full stack dev
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
-
 " ignore python bytecode files
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " flag unnecessary white space
-au BufNewFile,BufRead *.py, *.pyw, *.c, *.h match BadWhiteSpace /\s\+$/
+" won't work unless there is a highlight group named `BadWhiteSpace`
+" au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhiteSpace /\s\+$/
 
