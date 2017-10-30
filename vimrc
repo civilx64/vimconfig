@@ -23,6 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -156,4 +157,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 " flag unnecessary white space
 " won't work unless there is a highlight group named `BadWhiteSpace`
 " au BufNewFile,BufRead *.py,*.pyw,*.c,*.h match BadWhiteSpace /\s\+$/
+
+" use bash shell
+set shell=/bin/bash
 
