@@ -25,7 +25,9 @@ Plugin 'vim-scripts/xml.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'jmcantrell/vim-virtualenv'
 Bundle 'Rykka/riv.vim'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -36,7 +38,7 @@ Bundle 'Rykka/riv.vim'
 " Plugin 'file:///home/scott/path/to/plugin'
 
 " syntax checking and highlighting
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
