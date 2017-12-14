@@ -165,3 +165,5 @@ let NERDTreeIgnore=['\.pyc$', '\~$']
 " use bash shell
 set shell=/bin/bash
 
+" point YouCompleteMe server to python 2 path
+let g:ycm_server_python_interpreter = '/usr/bin/python'
