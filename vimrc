@@ -28,6 +28,7 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
 Bundle 'Rykka/riv.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nvie/vim-flake8'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -167,3 +168,14 @@ set shell=/bin/bash
 
 " point YouCompleteMe server to python 2 path
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_loc_list_height=3
