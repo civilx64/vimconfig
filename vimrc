@@ -169,7 +169,7 @@ set shell=/bin/bash
 
 " point YouCompleteMe server to python 2 path
 let g:ycm_server_python_interpreter = '/usr/bin/python'
-let g:ycm_server_python_interpreter = '/usr/bin/python3'
+" let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
