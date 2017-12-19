@@ -29,6 +29,7 @@ Plugin 'jmcantrell/vim-virtualenv'
 Bundle 'Rykka/riv.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -179,3 +180,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_check_on_open=0
 let g:syntastic_check_on_wq=0
 let g:syntastic_loc_list_height=3
+
+" markdown preview
+let vim_markdown_preview_hotkey='<C-m>'
+
+
