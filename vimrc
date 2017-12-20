@@ -157,6 +157,10 @@ augroup XML
         autocmd FileType xml :%foldopen!
 augroup END       
 
+" use xmllint to indent XML files
+" use :gg=G in vim to prettify (indent) xml files
+au FileType xml setlocal equalprg=xmllint\ --format\ -\ 2>/dev/null
+
 " ignore python bytecode files
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
