@@ -30,7 +30,7 @@ Bundle 'Rykka/riv.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
 Plugin 'JamshedVesuna/vim-markdown-preview'
-"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
