@@ -32,6 +32,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'lepture/vim-jinja'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
